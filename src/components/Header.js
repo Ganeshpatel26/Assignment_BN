@@ -15,8 +15,8 @@ const Header = () => {
       <header className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 full-width-navbar">
           <div className="container-fluid d-flex justify-content-between align-items-center">
-            <Link className="navbar-brand" href="to">
-              <img src="/logo192.png" alt="BN Logo" className="logo-img" />
+            <Link className="navbar-brand" to="/">
+              <img src={`${process.env.PUBLIC_URL}/logo192.png`} alt="BN Logo" className="logo-img" />
             </Link>
 
             <button
@@ -33,7 +33,6 @@ const Header = () => {
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
-                {/* Programs Vertical Dropdown with Arrow Icon */}
                 <li className="nav-item">
                   <Link className="nav-link" to="/programs" onClick={togglePrograms}>
                     Programs <span className="dropdown-arrow">&#9662;</span>
@@ -50,7 +49,6 @@ const Header = () => {
                   <Link className="nav-link" to="/success-stories">Success Stories</Link>
                 </li>
 
-                
                 <li className="nav-item">
                   <Link className="nav-link" to="/about_us" onClick={toggleAbout}>
                     About Us <span className="dropdown-arrow">&#9662;</span>
@@ -80,7 +78,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <img 
-                    src="/logo192.png" // Replace with the path to your user image
+                    src={`${process.env.PUBLIC_URL}/logo192.png`} // Replace with the path to your user image
                     alt="User" 
                     className="user-logo" 
                   />
@@ -91,9 +89,8 @@ const Header = () => {
         </nav>
       </header>
 
-      {/* New Division with Text and Link */}
       <div className="new-division text-center my-3">
-        <span className="text-content">To Know Your Ideal Body Weight, BMI & Obesity Drgree -</span>
+        <span className="text-content">To Know Your Ideal Body Weight, BMI & Obesity Degree -</span>
         <Link to="/your-link" className="click-here-link">Click Here</Link>
       </div>
     </>
