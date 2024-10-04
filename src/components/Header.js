@@ -49,7 +49,7 @@ const Header = () => {
                   <a className="nav-link" href="/success-stories">Success Stories</a>
                 </li>
 
-                {/* About Us Vertical Dropdown with Arrow Icon */}
+                
                 <li className="nav-item">
                   <a className="nav-link" href="/aboutus" onClick={toggleAbout}>
                     About Us <span className="dropdown-arrow">&#9662;</span>
