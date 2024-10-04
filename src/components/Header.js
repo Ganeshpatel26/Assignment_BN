@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [showPrograms, setShowPrograms] = useState(false);
@@ -14,9 +15,9 @@ const Header = () => {
       <header className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 full-width-navbar">
           <div className="container-fluid d-flex justify-content-between align-items-center">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" href="to">
               <img src="/logo192.png" alt="BN Logo" className="logo-img" />
-            </a>
+            </Link>
 
             <button
               className="navbar-toggler"
@@ -34,44 +35,44 @@ const Header = () => {
               <ul className="navbar-nav ms-auto">
                 {/* Programs Vertical Dropdown with Arrow Icon */}
                 <li className="nav-item">
-                  <a className="nav-link" href="/programs" onClick={togglePrograms}>
+                  <Link className="nav-link" to="/programs" onClick={togglePrograms}>
                     Programs <span className="dropdown-arrow">&#9662;</span>
-                  </a>
+                  </Link>
                   {showPrograms && (
                     <ul className="dropdown-menu show-dropdown">
-                      <li><a className="dropdown-item" href="/programs/program1">Program 1</a></li>
-                      <li><a className="dropdown-item" href="/programs/program2">Program 2</a></li>
+                      <li><Link className="dropdown-item" to="/programs/program1">Program 1</Link></li>
+                      <li><Link className="dropdown-item" to="/programs/program2">Program 2</Link></li>
                     </ul>
                   )}
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/success-stories">Success Stories</a>
+                  <Link className="nav-link" to="/success-stories">Success Stories</Link>
                 </li>
 
                 
                 <li className="nav-item">
-                  <a className="nav-link" href="/about_us" onClick={toggleAbout}>
+                  <Link className="nav-link" to="/about_us" onClick={toggleAbout}>
                     About Us <span className="dropdown-arrow">&#9662;</span>
-                  </a>
+                  </Link>
                   {showAbout && (
                     <ul className="dropdown-menu show-dropdown">
-                      <li><a className="dropdown-item" href="/about-us/company">Our Company</a></li>
-                      <li><a className="dropdown-item" href="/about-us/team">Our Team</a></li>
+                      <li><Link className="dropdown-item" to="/about-us/company">Our Company</Link></li>
+                      <li><Link className="dropdown-item" to="/about-us/team">Our Team</Link></li>
                     </ul>
                   )}
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/meet-khyati">Meet Khyati</a>
+                  <Link className="nav-link" to="/meet-khyati">Meet Khyati</Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/health-reads">Health Reads</a>
+                  <Link className="nav-link" to="/health-reads">Health Reads</Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link active-link" href="/">Recipes</a>
+                  <Link className="nav-link active-link" to="/">Recipes</Link>
                 </li>
 
                 <li className="nav-item">
@@ -93,7 +94,7 @@ const Header = () => {
       {/* New Division with Text and Link */}
       <div className="new-division text-center my-3">
         <span className="text-content">To Know Your Ideal Body Weight, BMI & Obesity Drgree -</span>
-        <a href="/your-link" className="click-here-link">Click Here</a>
+        <Link to="/your-link" className="click-here-link">Click Here</Link>
       </div>
     </>
   );
