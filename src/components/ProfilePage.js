@@ -12,10 +12,28 @@ const ProfilePage = () => {
         const phone = e.target.phone.value;
         const dob = e.target.dob.value;
         const gender = e.target.gender.value;
+        const terms = e.target.terms.checked;
 
-        // Validate form data (you can add more validation here)
-        if (!fullName || !email || !dob || !gender) {
+        // Validate form data
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phonePattern = /^\+?\d{10,15}$/; // Adjust as needed for your requirements
+        const today = new Date();
+        const dobDate = new Date(dob);
+
+        if (!fullName || !email || !dob || !gender || !terms) {
             alert("Please fill all required fields.");
+            return;
+        }
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid phone number.");
+            return;
+        }
+        if (dobDate > today) {
+            alert("Date of birth cannot be in the future.");
             return;
         }
 
@@ -142,8 +160,10 @@ const ProfilePage = () => {
                                         className="form-control ps-2"
                                         id="phone"
                                         name="phone"
-                                        value="+91 8355821911"
-                                        readOnly
+                                        placeholder="Phone Number"
+                                        readOnly // Set the phone input to read-only
+                                        value="+8355821911" // Provide a mock phone number or the actual one
+                                        required
                                     />
                                 </div>
                             </div>

@@ -15,14 +15,33 @@ const countryCodes = {
 
 const LoginForm = () => {
   const [countryCode, setCountryCode] = useState('IN');
-  const [phone, setPhone] = useState('8355821911'); // Hardcoded mobile number
+  const [phone, setPhone] = useState(''); // Allow user to enter their mobile number
+  const [error, setError] = useState(''); // State for error messages
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handlePhoneSubmit = (e) => {
     e.preventDefault();
 
-    // Dispatch sendOtp if needed, but you are bypassing Firebase logic.
+    // Validate phone number: must be exactly 10 digits
+    const phoneRegex = /^\d{10}$/; // Regular expression to check for exactly 10 digits
+
+    // Check if the input is empty
+    if (phone.trim() === '') {
+      setError('Please enter your mobile number.');
+      return;
+    }
+
+    // Check if the phone number is valid
+    if (!phoneRegex.test(phone)) {
+      setError('Please enter a valid phone number (10 digits only).');
+      return;
+    }
+
+    // If validation passes, clear error message
+    setError('');
+    
+    // Dispatch sendOtp if needed
     dispatch(sendOtp());
 
     // Navigate to OTP page directly without sending an OTP
@@ -52,12 +71,13 @@ const LoginForm = () => {
               <input
                 type="text"
                 placeholder="Enter your mobile number"
-                value={phone} // Allow user to modify the hardcoded number
+                value={phone} // Allow user to enter their mobile number
                 onChange={(e) => setPhone(e.target.value)} // Update state based on user input
                 className="form-input"
               />
             </div>
           </label>
+          {error && <div className="error-message text-danger">{error}</div>} {/* Display error message */}
           <button type="submit" className="submit-btn w-100">
             Send OTP
           </button>
