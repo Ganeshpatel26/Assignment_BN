@@ -51,7 +51,7 @@ const Header = () => {
 
                 
                 <li className="nav-item">
-                  <a className="nav-link" href="/aboutus" onClick={toggleAbout}>
+                  <a className="nav-link" href="/about_us" onClick={toggleAbout}>
                     About Us <span className="dropdown-arrow">&#9662;</span>
                   </a>
                   {showAbout && (
