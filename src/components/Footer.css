@@ -1,0 +1,82 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .footer .footer-logo h2 {
+    font-weight: 700;
+    color: #00bcd4;
+  }
+  
+  .footer .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #00bcd4;
+  }
+  
+  .footer ul li {
+    padding: 5px 0; /* Added padding for list items */
+  }
+  
+  .footer ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer ul li a:hover {
+    color: #00bcd4;
+    text-decoration: underline;
+  }
+  
+  .footer h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 10px; /* Added padding for headings */
+    cursor: pointer; /* Indicate that the header is clickable */
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    font-size: 14px;
+  }
+  
+  /* Adjustments for mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer .footer-logo h2 {
+      font-size: 24px;
+    }
+  
+    .footer ul {
+      padding-left: 0;
+    }
+  
+    .footer ul li {
+      padding-bottom: 5px;
+    }
+  
+    .footer-bottom {
+      text-align: left; /* Ensure bottom text is left-aligned */
+    }
+  }
+  
+  /* Additional padding for all devices */
+  .footer > .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .footer h5 {
+    padding-bottom: 10px; /* Added padding for headings */
+  }
+  
+  .footer ul li {
+    padding: 5px 0; /* Added padding for list items */
+  }
+  

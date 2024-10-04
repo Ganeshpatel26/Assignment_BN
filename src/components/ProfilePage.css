@@ -1,0 +1,66 @@
+.img-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure image covers the area */
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .container-fluid {
+    padding: 0;
+  }
+
+  .bg-white {
+    background-color: #ffffff; /* Background color for the form */
+  }
+  
+  .rounded {
+    border-radius: 0.5rem; /* Rounded corners for the box */
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
+  }
+  
+  .ps-5 {
+    padding-left: 2.5rem; /* Extra padding for the left icon */
+  }
+  
+  .position-relative {
+    padding-top: 1.5rem; /* Space for the icon */
+  }
+  
+  .form-control {
+    border-radius: 0.5rem; /* Rounded corners */
+  }
+  
+  .btn {
+    border-radius: 0.5rem; /* Rounded button */
+  }
+  
+  .text-start {
+    text-align: left; /* Left alignment for text */
+  }
+  
+  

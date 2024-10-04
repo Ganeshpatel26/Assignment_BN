@@ -1,0 +1,195 @@
+/* Additional styling for dropdown arrow */
+.dropdown-arrow {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+/* General styling */
+.header {
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+/* Full width navbar */
+.full-width-navbar {
+  width: 100%;
+}
+
+/* Logo styling */
+.logo-img {
+  width: 60px;
+}
+
+/* Navbar item styling */
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+/* Navbar item hover styling */
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+  background-color: #f1f1f1; /* Light grey background on hover */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Active link styling */
+/* Active link styling */
+.active-link {
+  color: #00e1ff;
+  font-weight: bold;
+  background-color: #a6d2f8; /* Light blue background to highlight */
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+
+.active-link:hover {
+  color: #0061a7;
+  background-color: #e0f0ff; /* Slightly darker blue on hover */
+}
+
+
+/* Button styling */
+.consultation-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: #fff; /* White text for the button */
+}
+
+.consultation-btn:hover {
+  background-color: #0097a7;
+  border-color: #0097a7;
+  color: #fff; /* Maintain white text on hover */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+/* Additional styling for rounded buttons */
+.btn-lg {
+  padding: 10px 20px; /* Increased padding for larger button size */
+  font-size: 16px; /* Larger font size */
+}
+
+/* Adjust button to have similar hover effect */
+.btn-primary:hover,
+.consultation-btn:hover {
+  background-color: #0097a7;
+  border-color: #0097a7;
+}
+
+/* User logo styling */
+.user-logo {
+  width: 40px; /* Set the desired width */
+  height: 40px; /* Set the desired height */
+  border-radius: 50%; /* This makes the image circular */
+  margin-left: 15px; /* Space between the button and the image */
+  border: 2px solid #00bcd4; /* Optional: Add a border to match the button color */
+  object-fit: cover; /* Ensures the image covers the entire circle */
+  overflow: hidden; /* Hides any overflow content */
+}
+
+/* New Division Styling */
+.new-division {
+  background-color: #f1f1f1; /* Light grey background for contrast */
+  padding: 15px; /* Add some padding for space */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 20px; /* Space above the division */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Text styling */
+.new-division .text-content {
+  font-size: 18px; /* Larger font size for readability */
+  color: #333; /* Darker text color */
+}
+
+/* Link styling */
+.new-division .click-here-link {
+  color: #00bcd4; /* Button color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  margin-left: 10px; /* Space between text and link */
+}
+
+.new-division .click-here-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0097a7; /* Darker color on hover */
+}
+
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none;
+  position: absolute; /* Allows dropdown to cover only necessary space */
+  min-width: 150px; /* Adjusts based on content; you can change this value as needed */
+  padding-left: 0;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-dropdown {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+  border-color: #0097a7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .consultation-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+
+  /* Override dropdown menu style for mobile */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+}
