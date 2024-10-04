@@ -34,7 +34,7 @@ const Header = () => {
               <ul className="navbar-nav ms-auto">
                 {/* Programs Vertical Dropdown with Arrow Icon */}
                 <li className="nav-item">
-                  <a className="nav-link" href="#" onClick={togglePrograms}>
+                  <a className="nav-link" href="/programs" onClick={togglePrograms}>
                     Programs <span className="dropdown-arrow">&#9662;</span>
                   </a>
                   {showPrograms && (
@@ -51,7 +51,7 @@ const Header = () => {
 
                 {/* About Us Vertical Dropdown with Arrow Icon */}
                 <li className="nav-item">
-                  <a className="nav-link" href="#" onClick={toggleAbout}>
+                  <a className="nav-link" href="/aboutus" onClick={toggleAbout}>
                     About Us <span className="dropdown-arrow">&#9662;</span>
                   </a>
                   {showAbout && (
